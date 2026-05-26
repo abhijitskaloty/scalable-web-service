@@ -1,0 +1,59 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "properties": {
+        "title": "ECS CPU Utilization",
+        "region": "us-east-1",
+        "metrics": [["AWS/ECS", "CPUUtilization", "ServiceName", "scalable-web-service", "ClusterName", "scalable-web-service-cluster"]],
+        "period": 60,
+        "stat": "Average",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "properties": {
+        "title": "ECS Memory Utilization",
+        "region": "us-east-1",
+        "metrics": [["AWS/ECS", "MemoryUtilization", "ServiceName", "scalable-web-service", "ClusterName", "scalable-web-service-cluster"]],
+        "period": 60,
+        "stat": "Average",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "properties": {
+        "title": "ECS Running Task Count",
+        "region": "us-east-1",
+        "metrics": [["ECS/ContainerInsights", "RunningTaskCount", "ServiceName", "scalable-web-service", "ClusterName", "scalable-web-service-cluster"]],
+        "period": 60,
+        "stat": "Average",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "properties": {
+        "title": "ALB Request Count",
+        "region": "us-east-1",
+        "metrics": [["AWS/ApplicationELB", "RequestCount", "LoadBalancer", "app/scalable-web-service-alb/1342026616"]],
+        "period": 60,
+        "stat": "Sum",
+        "view": "timeSeries"
+      }
+    },
+    {
+      "type": "metric",
+      "properties": {
+        "title": "ALB Target Response Time",
+        "region": "us-east-1",
+        "metrics": [["AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", "app/scalable-web-service-alb/1342026616"]],
+        "period": 60,
+        "stat": "Average",
+        "view": "timeSeries"
+      }
+    }
+  ]
+}
