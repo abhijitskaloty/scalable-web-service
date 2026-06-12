@@ -1,9 +1,28 @@
 # Scalable Web Service — AWS Infrastructure
 
+A personal project to learn AWS infrastructure design: deploying a containerized 
+web service with auto-scaling, load balancing, HTTPS, and observability using 
+Terraform (Infrastructure as Code).
+
+## About This Project
+
+I wanted hands-on experience designing production style AWS infrastructure: 
+networking, container orchestration, auto-scaling, security, and monitoring. 
+This has been all defined as code and reproducible with a single command. The 
+application  itself is a simple Go web service (publicly available, used for 
+testing auto-scaling behavior). The focus of this project is the infrastructure 
+around it.
+
 ## Live Endpoints
-- **HTTPS (CloudFront):** https://dfeowc4q7erki.cloudfront.net
-- **Health Check:** https://dfeowc4q7erki.cloudfront.net/health
-- **Metrics:** https://dfeowc4q7erki.cloudfront.net/metrics
+
+> **Note:** The infrastructure was torn down after testing to avoid ongoing 
+> AWS charges (`terraform destroy`). The endpoints below were live and 
+> functional during development — the full setup can be redeployed with 
+> `terraform apply`.
+
+- **HTTPS (CloudFront):** ~~https://dfeowc4q7erki.cloudfront.net~~ (deprovisioned)
+- **Health Check:** ~~https://dfeowc4q7erki.cloudfront.net/health~~ (deprovisioned)
+- **Metrics:** ~~https://dfeowc4q7erki.cloudfront.net/metrics~~ (deprovisioned)
 
 ## Architecture Overview
 Internet -> CloudFront (HTTPS) -> ALB (HTTP port 80) -> ECS Tasks (port 8080)
