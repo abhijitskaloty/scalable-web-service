@@ -17,7 +17,7 @@ around it.
 
 > **Note:** The infrastructure was torn down after testing to avoid ongoing 
 > AWS charges (`terraform destroy`). The endpoints below were live and 
-> functional during development — the full setup can be redeployed with 
+> functional during development; the full setup can be redeployed with 
 > `terraform apply`.
 
 - **HTTPS (CloudFront):** ~~https://dfeowc4q7erki.cloudfront.net~~ (deprovisioned)
