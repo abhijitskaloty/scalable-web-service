@@ -35,7 +35,11 @@ resource "aws_ecs_task_definition" "main" {
   container_definitions = jsonencode([
     {
       name = "scalable-web-service"
+
+      # Public demo Go app used for testing infrastructure scaling
+      # Source: https://github.com/therealdwright/scalable-web-service
       image = "ghcr.io/therealdwright/scalable-web-service:v1"
+
       essential = true
 
       portMappings = [
